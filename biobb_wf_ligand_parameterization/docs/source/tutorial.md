@@ -30,7 +30,8 @@ Conda **Installation**:
  6. [Output Files](#output)
  
 ***
-![Bioexcel2_logo_400px_transp.png](attachment:Bioexcel2_logo_400px_transp.png)
+<img src="https://bioexcel.eu/wp-content/uploads/2019/04/Bioexcell_logo_1080px_transp.png" alt="Bioexcel2 logo"
+    title="Bioexcel2 logo" width="400" />
 ***
 
 <a id="input"></a>
@@ -272,5 +273,5 @@ view
 
 Important **Output files** generated:
  - IBPparams.gro: **Structure** of the parameterized ligand in gro (GROMACS) format.
- - IBPparams.top: **Topology** of the parameterized ligand, including a reference to the {{output_acpype_itp}}.
+ - IBPparams.top: **Topology** of the parameterized ligand, including a reference to the IBPparams.itp.
  - IBPparams.itp: **Include Topology File (itp)** of the parameterized ligand, including the parameters information: bonds, angles, dihedrals, etc.

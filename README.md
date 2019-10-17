@@ -1,3 +1,4 @@
+[![](https://readthedocs.org/projects/biobb-wf-ligand-parameterization/badge/?version=latest)](https://biobb-wf-ligand-parameterization.readthedocs.io/en/latest/?badge=latest)
 
 # Automatic Ligand parameterization tutorial using BioExcel Building Blocks (biobb)
 
@@ -13,6 +14,7 @@ This tutorial aims to illustrate the process of **ligand parameterization** for 
 
 ### Biobb modules used
 
+* [biobb_io](https://github.com/bioexcel/biobb_io): Tools to fetch data to be consumed by the rest of the Biobb building blocks.
 * [biobb_chemistry](https://github.com/bioexcel/biobb_chemistry): Tools to manipulate chemical data.
 
 ### Auxiliar libraries used
@@ -30,7 +32,7 @@ conda install -c bioconda biobb_ligand_parameterization //// NOTE: this is not y
 
 ## Tutorial
 
-Click here to [view tutorial in Read the Docs]()
+Click here to [view tutorial in Read the Docs](https://biobb-wf-ligand-parameterization.readthedocs.io/en/latest/index.html)
 
 ***
 
