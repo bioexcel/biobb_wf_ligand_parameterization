@@ -1,0 +1,11 @@
+name: biobb_wf_ligand_parameterization_tutorial
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python==3.6
+  - biobb_common==1.1.6
+  - biobb_io==1.1.6
+  - biobb_chemistry==1.0.8
+  - nglview
+  - conda
