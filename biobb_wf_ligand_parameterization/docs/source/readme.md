@@ -26,7 +26,7 @@ This tutorial aims to illustrate the process of **ligand parameterization** for 
 ### Conda Installation
 
 ```console
-conda install -c bioconda biobb_ligand_parameterization //// NOTE: this is not yet available ////
+conda env create -f binder/environment.yml
 ```
 
 ***
