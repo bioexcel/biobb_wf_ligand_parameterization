@@ -20,13 +20,21 @@ This tutorial aims to illustrate the process of **ligand parameterization** for 
 
 ### Auxiliar libraries used
 
+* [nb_conda_kernels](https://github.com/Anaconda-Platform/nb_conda_kernels): Enables a Jupyter Notebook or JupyterLab application in one conda environment to access kernels for Python, R, and other languages found in other environments.
 * [nglview](http://nglviewer.org/#nglview): Jupyter/IPython widget to interactively view molecular structures and trajectories in notebooks.
 * [ipywidgets](https://github.com/jupyter-widgets/ipywidgets): Interactive HTML widgets for Jupyter notebooks and the IPython kernel.
 
-### Conda Installation
+### Conda Installation and Launch
 
 ```console
-conda env create -f binder/environment.yml
+git clone https://github.com/bioexcel/biobb_wf_ligand_parameterization.git
+cd biobb_wf_ligand_parameterization
+conda env create -f conda_env/environment.yml
+conda activate biobb_ligand_parameterization_tutorial
+conda install -y -c bioconda biobb_chemistry==2.0.0
+jupyter-nbextension enable --py --user widgetsnbextension
+jupyter-nbextension enable --py --user nglview
+jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_parameterization_tutorial.ipynb
 ```
 
 ***
