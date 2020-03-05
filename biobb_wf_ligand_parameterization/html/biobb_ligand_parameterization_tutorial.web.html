@@ -13139,9 +13139,6 @@ div#notebook {
   cd biobb_wf_ligand_parameterization
   conda env create -f conda_env/environment.yml
   conda activate biobb_ligand_parameterization_tutorial
-  conda install -y -c bioconda biobb_chemistry==2.0.0
-  jupyter-nbextension enable --py --user widgetsnbextension
-  jupyter-nbextension enable --py --user nglview
   jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_parameterization_tutorial.ipynb
 </pre>
 </div>
@@ -13254,7 +13251,7 @@ Alternatively, a <strong>PDB file</strong> can be used as starting structure. <b
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Show small ligand structure</span>
-<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">input_structure</span><span class="p">)</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">input_structure</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;300px&#39;</span><span class="p">])</span>
 <span class="n">view</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
@@ -13333,7 +13330,7 @@ Alternatively, a <strong>PDB file</strong> can be used as starting structure. <b
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Show small ligand structure</span>
-<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">output_babel_h</span><span class="p">)</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">output_babel_h</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
 <span class="n">view</span>
@@ -13411,7 +13408,7 @@ Alternatively, a <strong>PDB file</strong> can be used as starting structure. <b
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Show small ligand structure</span>
-<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">output_babel_min</span><span class="p">)</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">output_babel_min</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;300px&#39;</span><span class="p">])</span>
 <span class="n">view</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
@@ -13450,17 +13447,17 @@ Alternatively, a <strong>PDB file</strong> can be used as starting structure. <b
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Show different structures generated (for comparison)</span>
-<span class="n">view1</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">input_structure</span><span class="p">)</span>
+<span class="n">view1</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">input_structure</span><span class="p">)</span>
 <span class="n">view1</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">)</span>
 <span class="n">view1</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;250px&#39;</span><span class="p">,</span><span class="s1">&#39;300px&#39;</span><span class="p">])</span>
 <span class="n">view1</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
 <span class="n">view1</span>
-<span class="n">view2</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">output_babel_h</span><span class="p">)</span>
+<span class="n">view2</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">output_babel_h</span><span class="p">)</span>
 <span class="n">view2</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">)</span>
 <span class="n">view2</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;250px&#39;</span><span class="p">,</span><span class="s1">&#39;300px&#39;</span><span class="p">])</span>
 <span class="n">view2</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
 <span class="n">view2</span>
-<span class="n">view3</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">output_babel_min</span><span class="p">)</span>
+<span class="n">view3</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">output_babel_min</span><span class="p">)</span>
 <span class="n">view3</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">)</span>
 <span class="n">view3</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;250px&#39;</span><span class="p">,</span><span class="s1">&#39;300px&#39;</span><span class="p">])</span>
 <span class="n">view3</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>
@@ -13544,7 +13541,7 @@ Alternatively, a <strong>PDB file</strong> can be used as starting structure. <b
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Show small ligand structure</span>
-<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_file</span><span class="p">(</span><span class="n">output_acpype_gro</span><span class="p">)</span>
+<span class="n">view</span> <span class="o">=</span> <span class="n">nglview</span><span class="o">.</span><span class="n">show_structure_file</span><span class="p">(</span><span class="n">output_acpype_gro</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="n">repr_type</span><span class="o">=</span><span class="s1">&#39;ball+stick&#39;</span><span class="p">,</span> <span class="n">selection</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">_remote_call</span><span class="p">(</span><span class="s1">&#39;setSize&#39;</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s1">&#39;Widget&#39;</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;300px&#39;</span><span class="p">])</span>
 <span class="n">view</span><span class="o">.</span><span class="n">camera</span><span class="o">=</span><span class="s1">&#39;orthographic&#39;</span>

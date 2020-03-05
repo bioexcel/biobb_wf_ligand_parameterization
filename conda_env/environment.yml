@@ -5,7 +5,8 @@ channels:
 dependencies:
   - python==3.6.5
   - biobb_common==2.0.1
-  - biobb_io==2.0.0
+  - biobb_io==2.0.1
+  - biobb_chemistry==2.0.2
   - nb_conda_kernels
-  - nglview==1.1.7
+  - nglview
   - conda

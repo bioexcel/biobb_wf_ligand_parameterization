@@ -24,9 +24,6 @@ git clone https://github.com/bioexcel/biobb_wf_ligand_parameterization.git
 cd biobb_wf_ligand_parameterization
 conda env create -f conda_env/environment.yml
 conda activate biobb_ligand_parameterization_tutorial
-conda install -y -c bioconda biobb_chemistry==2.0.0
-jupyter-nbextension enable --py --user widgetsnbextension
-jupyter-nbextension enable --py --user nglview
 jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_parameterization_tutorial.ipynb
 ```
 
@@ -99,7 +96,7 @@ Visualizing the downloaded/given **ligand PDB structure** using **NGL**:
 
 ```python
 #Show small ligand structure
-view = nglview.show_file(input_structure)
+view = nglview.show_structure_file(input_structure)
 view.add_representation(repr_type='ball+stick', selection='all')
 view._remote_call('setSize', target='Widget', args=['','300px'])
 view.camera='orthographic'
@@ -144,7 +141,7 @@ Visualizing the **ligand PDB structure** with the newly added **hydrogen atoms**
 
 ```python
 #Show small ligand structure
-view = nglview.show_file(output_babel_h)
+view = nglview.show_structure_file(output_babel_h)
 view.add_representation(repr_type='ball+stick', selection='all')
 view.camera='orthographic'
 view
@@ -188,7 +185,7 @@ Visualizing the **ligand PDB structure** with the newly added **hydrogen atoms**
 
 ```python
 #Show small ligand structure
-view = nglview.show_file(output_babel_min)
+view = nglview.show_structure_file(output_babel_min)
 view.add_representation(repr_type='ball+stick', selection='all')
 view._remote_call('setSize', target='Widget', args=['','300px'])
 view.camera='orthographic'
@@ -207,17 +204,17 @@ Visualizing all the structures generated so far:
 
 ```python
 #Show different structures generated (for comparison)
-view1 = nglview.show_file(input_structure)
+view1 = nglview.show_structure_file(input_structure)
 view1.add_representation(repr_type='ball+stick')
 view1._remote_call('setSize', target='Widget', args=['250px','300px'])
 view1.camera='orthographic'
 view1
-view2 = nglview.show_file(output_babel_h)
+view2 = nglview.show_structure_file(output_babel_h)
 view2.add_representation(repr_type='ball+stick')
 view2._remote_call('setSize', target='Widget', args=['250px','300px'])
 view2.camera='orthographic'
 view2
-view3 = nglview.show_file(output_babel_min)
+view3 = nglview.show_structure_file(output_babel_min)
 view3.add_representation(repr_type='ball+stick')
 view3._remote_call('setSize', target='Widget', args=['250px','300px'])
 view3.camera='orthographic'
@@ -269,7 +266,7 @@ Visualizing the generated **GROMACS** gro structure corresponding to the paramet
 
 ```python
 #Show small ligand structure
-view = nglview.show_file(output_acpype_gro)
+view = nglview.show_structure_file(output_acpype_gro)
 view.add_representation(repr_type='ball+stick', selection='all')
 view._remote_call('setSize', target='Widget', args=['','300px'])
 view.camera='orthographic'
