@@ -31,6 +31,8 @@ git clone https://github.com/bioexcel/biobb_wf_ligand_parameterization.git
 cd biobb_wf_ligand_parameterization
 conda env create -f conda_env/environment.yml
 conda activate biobb_ligand_parameterization_tutorial
+jupyter-nbextension enable --py --user widgetsnbextension
+jupyter-nbextension enable --py --user nglview
 jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_parameterization_tutorial.ipynb
 ```
 
