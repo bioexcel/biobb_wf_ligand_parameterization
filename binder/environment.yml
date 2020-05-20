@@ -3,7 +3,6 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - python
   - biobb_common==3.0.0
   - biobb_io==3.0.0
   - biobb_chemistry==3.0.1
