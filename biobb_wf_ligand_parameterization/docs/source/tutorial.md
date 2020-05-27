@@ -37,6 +37,7 @@ jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_paramet
  4. [Energetically Minimize Hydrogen Atoms](#min)
  5. [Generating Ligand Parameters](#acpype)
  6. [Output Files](#output)
+ 7. [Questions & Comments](#questions)
  
 ***
 <img src="https://bioexcel.eu/wp-content/uploads/2019/04/Bioexcell_logo_1080px_transp.png" alt="Bioexcel2 logo"
@@ -284,3 +285,16 @@ Important **Output files** generated:
  - IBPparams.gro: **Structure** of the parameterized ligand in gro (GROMACS) format.
  - IBPparams.top: **Topology** of the parameterized ligand, including a reference to the IBPparams.itp.
  - IBPparams.itp: **Include Topology File (itp)** of the parameterized ligand, including the parameters information: bonds, angles, dihedrals, etc.
+
+***
+<a id="questions"></a>
+
+## Questions & Comments
+
+Questions, issues, suggestions and comments are really welcome!
+
+* GitHub issues:
+    * [https://github.com/bioexcel/biobb](https://github.com/bioexcel/biobb)
+
+* BioExcel forum:
+    * [https://ask.bioexcel.eu/c/BioExcel-Building-Blocks-library](https://ask.bioexcel.eu/c/BioExcel-Building-Blocks-library)
