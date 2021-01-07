@@ -1,5 +1,5 @@
 [![](https://readthedocs.org/projects/biobb-wf-ligand-parameterization/badge/?version=latest)](https://biobb-wf-ligand-parameterization.readthedocs.io/en/latest/?badge=latest)
-[![](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bioexcel/biobb_wf_ligand_parameterization/master?filepath=biobb_wf_ligand_parameterization%2Fnotebooks%2Fbiobb_ligand_parameterization_tutorial.ipynb)
+[![](https://mybinder.org/badge_logo.svg)](https://bioexcel-binder.tsi.ebi.ac.uk/v2/gh/bioexcel/biobb_wf_ligand_parameterization/master?filepath=biobb_wf_ligand_parameterization%2Fnotebooks%2Fbiobb_ligand_parameterization_tutorial.ipynb)
 
 # Automatic Ligand parameterization tutorial using BioExcel Building Blocks (biobb)
 
