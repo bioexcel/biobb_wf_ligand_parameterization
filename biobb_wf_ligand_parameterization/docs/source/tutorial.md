@@ -1,4 +1,3 @@
-
 # Automatic Ligand parameterization tutorial using BioExcel Building Blocks (biobb)
 ***
 This tutorial aims to illustrate the process of **ligand parameterization** for a **small molecule**, step by step, using the **BioExcel Building Blocks library (biobb)**. The particular example used is the **Ibuprofen** small compound (3-letter code IBP, Drugbank code [DB01050](https://www.drugbank.ca/drugs/DB01050)), a non-steroidal **anti-inflammatory drug** (NSAID) derived from propionic acid and it is considered the first of the propionics. 
@@ -27,7 +26,7 @@ conda activate biobb_ligand_parameterization_tutorial
 jupyter-nbextension enable --py --user widgetsnbextension
 jupyter-nbextension enable --py --user nglview
 jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_parameterization_tutorial.ipynb
-```
+  ``` 
 
 ***
 ### Pipeline steps:
@@ -40,8 +39,7 @@ jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_paramet
  7. [Questions & Comments](#questions)
  
 ***
-<img src="https://bioexcel.eu/wp-content/uploads/2019/04/Bioexcell_logo_1080px_transp.png" alt="Bioexcel2 logo"
-    title="Bioexcel2 logo" width="400" />
+![](https://bioexcel.eu/wp-content/uploads/2019/04/Bioexcell_logo_1080px_transp.png)
 ***
 
 <a id="input"></a>
@@ -76,10 +74,9 @@ Alternatively, a **PDB file** can be used as starting structure. <br>
 
 
 ```python
-# Ligand: Download ligand structure from MMB PDB mirror REST API (http://mmb.irbbarcelona.org/api/)
+# Ligand: Download ligand structure from MMB PDB mirror REST API (https://mmb.irbbarcelona.org/api/)
 # Import module
-from biobb_io.api.ligand import Ligand
-from biobb_io.api.pdb import Pdb
+from biobb_io.api.ligand import ligand
 
 # Create prop dict and inputs/outputs
 input_structure = ligandCode + '.pdb'
@@ -89,8 +86,8 @@ prop = {
 }
 
 #Create and launch bb
-Ligand(output_pdb_path=input_structure,
-        properties=prop).launch()
+ligand(output_pdb_path=input_structure,
+        properties=prop)
 ```
 
 ### Visualizing 3D structure
@@ -121,7 +118,7 @@ Adding **Hydrogen atoms** to the small molecule, according to the given pH.
 ```python
 # Babel_add_hydrogens: add Hydrogen atoms to a small molecule
 # Import module
-from biobb_chemistry.babelm.babel_add_hydrogens import BabelAddHydrogens
+from biobb_chemistry.babelm.babel_add_hydrogens import babel_add_hydrogens
 
 # Create prop dict and inputs/outputs
 output_babel_h = ligandCode + '.H.mol2' 
@@ -133,9 +130,9 @@ prop = {
 }
 
 #Create and launch bb
-BabelAddHydrogens(input_path=input_structure,
+babel_add_hydrogens(input_path=input_structure,
                   output_path=output_babel_h,
-                  properties=prop).launch()
+                  properties=prop)
 ```
 
 ### Visualizing 3D structure
@@ -165,7 +162,7 @@ Energetically minimize newly added **Hydrogen atoms**.
 ```python
 # Babel_minimize: Structure energy minimization of a small molecule after being modified adding hydrogen atoms
 # Import module
-from biobb_chemistry.babelm.babel_minimize import BabelMinimize
+from biobb_chemistry.babelm.babel_minimize import babel_minimize
 
 # Create prop dict and inputs/outputs
 output_babel_min = ligandCode + '.H.min.pdb'                              
@@ -177,9 +174,9 @@ prop = {
 
 
 #Create and launch bb
-BabelMinimize(input_path=output_babel_h,
+babel_minimize(input_path=output_babel_h,
               output_path=output_babel_min,
-              properties=prop).launch()
+              properties=prop)
 ```
 
 ### Visualizing 3D structure
@@ -243,7 +240,7 @@ ipywidgets.HBox([view1, view2, view3])
 ```python
 # Acpype_params_gmx: Generation of topologies for GROMACS with ACPype
 # Import module
-from biobb_chemistry.acpype.acpype_params_gmx import AcpypeParamsGMX
+from biobb_chemistry.acpype.acpype_params_gmx import acpype_params_gmx
 
 # Create prop dict and inputs/outputs
 output_acpype_gro = ligandCode + 'params.gro'
@@ -256,11 +253,11 @@ prop = {
 }
 
 #Create and launch bb
-AcpypeParamsGMX(input_path=output_babel_min,
+acpype_params_gmx(input_path=output_babel_min,
                 output_path_gro=output_acpype_gro,
                 output_path_itp=output_acpype_itp,
                 output_path_top=output_acpype_top,
-                properties=prop).launch()
+                properties=prop)
 ```
 
 ### Visualizing 3D structure
@@ -298,3 +295,4 @@ Questions, issues, suggestions and comments are really welcome!
 
 * BioExcel forum:
     * [https://ask.bioexcel.eu/c/BioExcel-Building-Blocks-library](https://ask.bioexcel.eu/c/BioExcel-Building-Blocks-library)
+
