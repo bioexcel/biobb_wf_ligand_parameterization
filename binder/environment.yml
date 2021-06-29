@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - biobb_io==3.5.2
-  - biobb_chemistry==3.5.0
+  - biobb_io==3.6.0
+  - biobb_chemistry==3.6.0
   - nglview
   - conda
