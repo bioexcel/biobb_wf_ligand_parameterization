@@ -23,10 +23,16 @@ git clone https://github.com/bioexcel/biobb_wf_ligand_parameterization.git
 cd biobb_wf_ligand_parameterization
 conda env create -f conda_env/environment.yml
 conda activate biobb_ligand_parameterization_tutorial
+jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_parameterization_tutorial.ipynb
+``` 
+
+Please execute the following commands before launching the Jupyter Notebook if you experience some issues with widgets such as NGL View (3D molecular visualization):
+
+```console
 jupyter-nbextension enable --py --user widgetsnbextension
 jupyter-nbextension enable --py --user nglview
-jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_parameterization_tutorial.ipynb
-  ``` 
+jupyter nbextension enable python-markdown/main
+```
 
 ***
 ### Pipeline steps:
@@ -57,7 +63,7 @@ import ipywidgets
 import os
 
 ligandCode = 'IBP'
-mol_charge = -1
+mol_charge = 0
 pH = 7.4
 ```
 

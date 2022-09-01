@@ -3,7 +3,9 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
-  - biobb_io==3.6.0
-  - biobb_chemistry==3.6.0
+  - biobb_io==3.8.0
+  - biobb_chemistry==3.8.0
+  - ipywidgets==7.6.6
+  - jupyter_contrib_nbextensions
   - nglview
   - conda
