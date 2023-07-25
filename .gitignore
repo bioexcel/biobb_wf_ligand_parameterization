@@ -27,3 +27,4 @@ biobb_wf_ligand_parameterization/notebooks/*.docs.ipynb
 *.old.ipynb
 *.bk.ipynb
 \#*\#
+.DS_Store
