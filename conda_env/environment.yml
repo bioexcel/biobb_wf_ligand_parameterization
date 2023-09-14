@@ -5,9 +5,6 @@ channels:
 dependencies:
   - biobb_io==4.1.0
   - biobb_chemistry==4.1.0
-  - ipywidgets==7.6.6
-  - jupyter_client==7.3.2
-  - tornado==6.1
   - nb_conda_kernels
   - importlib_metadata
   - jupyter_contrib_nbextensions
