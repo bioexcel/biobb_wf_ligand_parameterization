@@ -39,6 +39,8 @@ jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_paramet
 
 Click here to [view tutorial in Read the Docs](https://biobb-wf-ligand-parameterization.readthedocs.io/en/latest/index.html)
 
+Click here to [execute tutorial in Binder](https://mybinder.org/v2/gh/bioexcel/biobb_wf_ligand_parameterization/HEAD?labpath=biobb_wf_ligand_parameterization%2Fnotebooks%2Fbiobb_ligand_parameterization_tutorial.ipynb)
+
 ***
 
 ## Version
