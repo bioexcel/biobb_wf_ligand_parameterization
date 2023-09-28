@@ -29,7 +29,7 @@ jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_paramet
 ```
 
 ***
-### Pipeline steps:
+## Pipeline steps:
  1. [Input Parameters](#input)
  2. [Fetching Ligand Structure](#fetch)
  3. [Add Hydrogen Atoms](#addh)
