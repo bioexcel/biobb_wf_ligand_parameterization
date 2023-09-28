@@ -5,11 +5,14 @@ This tutorial aims to illustrate the process of **ligand parameterization** for 
 **OpenBabel and ACPype** packages are used to **add hydrogens**, **energetically minimize the structure**, and 
 **generate parameters** for the **GROMACS** package. With *Generalized Amber Force Field (GAFF)* forcefield and *AM1-BCC* charges.  
 ***
-**Biobb modules** used:
 
- - [biobb_io](https://github.com/bioexcel/biobb_io): Tools to fetch data to be consumed by the rest of the Biobb building blocks.
- - [biobb_chemistry](https://github.com/bioexcel/biobb_chemistry): Tools to manipulate chemistry data.
- 
+## Settings
+
+### Biobb modules used
+
+* [biobb_io](https://github.com/bioexcel/biobb_io): Tools to fetch data to be consumed by the rest of the Biobb building blocks.
+* [biobb_chemistry](https://github.com/bioexcel/biobb_chemistry): Tools to manipulate chemical data.
+
 ### Auxiliar libraries used
 
 * [jupyter](https://jupyter.org/): Free software, open standards, and web services for interactive computing across all programming languages.
