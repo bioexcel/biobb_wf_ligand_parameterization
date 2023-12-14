@@ -7,3 +7,4 @@ dependencies:
   - biobb_chemistry==4.1.0
   - jupyter
   - nglview
+  - pdb-tools
