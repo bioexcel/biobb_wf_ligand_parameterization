@@ -5,9 +5,14 @@
 
 ***
 
-This tutorial aims to illustrate the process of **ligand parameterization** for a **small molecule**, step by step, using the **BioExcel Building Blocks library (biobb)**. The particular example used is the **Sulfasalazine** protein (3-letter code SAS), used to treat rheumatoid arthritis, ulcerative colitis, and Crohn's disease.
+This tutorial aims to illustrate the process of **ligand parameterization** for a **small molecule**, step by step, using the **BioExcel Building Blocks library (biobb)**. 
 
-**OpenBabel and ACPype** packages are used to **add hydrogens, energetically minimize the structure**, and **generate parameters** for the **GROMACS** package. With *Generalized Amber Force Field (GAFF) forcefield and AM1-BCC* charges.
+Two examples are provided:
+
+1. One uses is the **Sulfasalazine** protein (3-letter code SAS), used to treat rheumatoid arthritis, ulcerative colitis, and Crohn's disease, generating parameters for the the **GROMACS** package.
+2. The second example used Oseltamivir (also called Tamiflu), an antiviral drug, generating parameters for use in CNS (the computational engine used for example by **HADDOCK*). 
+
+**OpenBabel and ACPype** packages are used to **add hydrogens, energetically minimize the structure**, and **generate parameters** with *Generalized Amber Force Field (GAFF) forcefield and AM1-BCC* charges.
 
 ***
 
@@ -30,7 +35,16 @@ git clone https://github.com/bioexcel/biobb_wf_ligand_parameterization.git
 cd biobb_wf_ligand_parameterization
 conda env create -f conda_env/environment.yml
 conda activate biobb_ligand_parameterization_tutorial
+```
+
+For parametrizing a ligand for use in **GROMACS** launch the following notebook:
+```console
 jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_parameterization_tutorial.ipynb
+```
+
+For parametrizing a ligand for use in **CNS/HADDOCK** launch the following notebook:
+```console
+jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_CNS_parameterization_tutorial.ipynb
 ```
 
 ***
@@ -39,12 +53,14 @@ jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_paramet
 
 Click here to [view tutorial in Read the Docs](https://biobb-wf-ligand-parameterization.readthedocs.io/en/latest/index.html)
 
-Click here to [execute tutorial in Binder](https://mybinder.org/v2/gh/bioexcel/biobb_wf_ligand_parameterization/HEAD?labpath=biobb_wf_ligand_parameterization%2Fnotebooks%2Fbiobb_ligand_parameterization_tutorial.ipynb)
+Click here to [execute the GROMACS parametrization tutorial in Binder](https://mybinder.org/v2/gh/bioexcel/biobb_wf_ligand_parameterization/HEAD?labpath=biobb_wf_ligand_parameterization%2Fnotebooks%2Fbiobb_ligand_parameterization_tutorial.ipynb)
+
+Click here to [execute the CNS parametrization tutorial in Binder](https://mybinder.org/v2/gh/bioexcel/biobb_wf_ligand_parameterization/HEAD?labpath=biobb_wf_ligand_parameterization%2Fnotebooks%2Fbiobb_ligand_CNS_parameterization_tutorial.ipynb)
 
 ***
 
 ## Version
-2023.3
+2023.12
 
 ## Copyright & Licensing
 This software has been developed in the [MMB group](http://mmb.irbbarcelona.org) at the [BSC](http://www.bsc.es/) & [IRB](https://www.irbbarcelona.org/) for the [European BioExcel](http://bioexcel.eu/), funded by the European Commission (EU H2020 [823830](http://cordis.europa.eu/projects/823830), EU H2020 [675728](http://cordis.europa.eu/projects/675728)).
