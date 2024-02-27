@@ -46,7 +46,7 @@ jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_paramet
 ***
 ## Input parameters
 **Input parameters** needed:
- - **ligandCode**: 3-letter code of the ligand structure (e.g. IBP)
+ - **ligandCode**: 3-letter code of the ligand structure (e.g. IBP, Drugbank code [DB01050](https://www.drugbank.ca/drugs/DB01050))
  - **mol_charge**: Molecule net charge (e.g. -1)
  - **pH**: Acidity or alkalinity for the small molecule. Hydrogen atoms will be added according to this pH. (e.g. 7.4)
 
