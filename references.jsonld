@@ -1,0 +1,17 @@
+{
+  "@context": "http://schema.org",
+  "name": "Automatic Ligand parameterization",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://raw.githubusercontent.com/bioexcel/biobb_io/master/references.jsonld",
+      "name": "biobb_io"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://raw.githubusercontent.com/bioexcel/biobb_chemistry/master/references.jsonld",
+      "name": "biobb_chemistry"
+    }
+  ]
+}
