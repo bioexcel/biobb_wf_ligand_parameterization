@@ -1,6 +1,6 @@
 {
   "@context": "http://schema.org",
-  "name": "Automatic Ligand parameterization workflow",
+  "name": "Automatic ligand parameterization workflow",
   "@type": "ItemList",
   "itemListElement": [
     {
