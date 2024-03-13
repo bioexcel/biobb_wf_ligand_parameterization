@@ -1,8 +1,13 @@
 {
   "@context": "http://schema.org",
-  "name": "Automatic Ligand parameterization",
+  "name": "Automatic Ligand parameterization workflow",
   "@type": "ItemList",
   "itemListElement": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://raw.githubusercontent.com/bioexcel/biobb/master/references.jsonld",
+      "name": "biobb"
+    },
     {
       "@type": "SoftwareApplication",
       "@id": "https://raw.githubusercontent.com/bioexcel/biobb_io/master/references.jsonld",
