@@ -1,7 +1,8 @@
 {
   "@context": "http://schema.org",
-  "name": "Automatic ligand parameterization workflow",
+  "@id": "https://github.com/bioexcel/biobb_wf_ligand_parameterization",
   "@type": "ItemList",
+  "name": "Automatic ligand parameterization workflow",
   "itemListElement": [
     {
       "@type": "SoftwareApplication",
