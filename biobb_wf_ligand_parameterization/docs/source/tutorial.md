@@ -5,14 +5,11 @@ This tutorial aims to illustrate the process of **ligand parameterization** for 
 **OpenBabel and ACPype** packages are used to **add hydrogens**, **energetically minimize the structure**, and 
 **generate parameters** for the **GROMACS** package. With *Generalized Amber Force Field (GAFF)* forcefield and *AM1-BCC* charges.  
 ***
+**Biobb modules** used:
 
-## Settings
-
-### Biobb modules used
-
-* [biobb_io](https://github.com/bioexcel/biobb_io): Tools to fetch data to be consumed by the rest of the Biobb building blocks.
-* [biobb_chemistry](https://github.com/bioexcel/biobb_chemistry): Tools to manipulate chemical data.
-
+ - [biobb_io](https://github.com/bioexcel/biobb_io): Tools to fetch data to be consumed by the rest of the Biobb building blocks.
+ - [biobb_chemistry](https://github.com/bioexcel/biobb_chemistry): Tools to manipulate chemistry data.
+ 
 ### Auxiliary libraries used
 
 * [jupyter](https://jupyter.org/): Free software, open standards, and web services for interactive computing across all programming languages.
@@ -29,7 +26,7 @@ jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_paramet
 ```
 
 ***
-## Pipeline steps:
+### Pipeline steps:
  1. [Input Parameters](#input)
  2. [Fetching Ligand Structure](#fetch)
  3. [Add Hydrogen Atoms](#addh)
@@ -41,6 +38,50 @@ jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_paramet
 ***
 ![](https://bioexcel.eu/wp-content/uploads/2019/04/Bioexcell_logo_1080px_transp.png)
 ***
+
+## Initializing colab
+The two cells below are used only in case this notebook is executed via **Google Colab**. Take into account that, for running conda on **Google Colab**, the **condacolab** library must be installed. As [explained here](https://pypi.org/project/condacolab/), the installation requires a **kernel restart**, so when running this notebook in **Google Colab**, don't run all cells until this **installation** is properly **finished** and the **kernel** has **restarted**.
+
+
+```python
+# Only executed when using google colab
+import sys
+if 'google.colab' in sys.modules:
+  import subprocess
+  from pathlib import Path
+  try:
+    subprocess.run(["conda", "-V"], check=True)
+  except FileNotFoundError:
+    subprocess.run([sys.executable, "-m", "pip", "install", "condacolab"], check=True)
+    import condacolab
+    condacolab.install()
+    # Clone repository
+    repo_URL = "https://github.com/bioexcel/biobb_wf_ligand_parameterization.git"
+    repo_name = Path(repo_URL).name.split('.')[0]
+    if not Path(repo_name).exists():
+      subprocess.run(["mamba", "install", "-y", "git"], check=True)
+      subprocess.run(["git", "clone", repo_URL], check=True)
+      print("⏬ Repository properly cloned.")
+    # Install environment
+    print("⏳ Creating environment...")
+    env_file_path = f"{repo_name}/conda_env/environment.yml"
+    subprocess.run(["mamba", "env", "update", "-n", "base", "-f", env_file_path], check=True)
+    print("🎨 Install NGLView dependencies...")
+    subprocess.run(["mamba", "install", "-y", "-c", "conda-forge", "nglview==3.0.8", "ipywidgets=7.7.2"], check=True)
+    print("👍 Conda environment successfully created and updated.")
+```
+
+
+```python
+# Enable widgets for colab
+if 'google.colab' in sys.modules:
+  from google.colab import output
+  output.enable_custom_widget_manager()
+  # Change working dir
+  import os
+  os.chdir("biobb_wf_ligand_parameterization/biobb_wf_ligand_parameterization/notebooks")
+  print(f"📂 New working directory: {os.getcwd()}")
+```
 
 <a id="input"></a>
 ***
@@ -279,9 +320,9 @@ view
 ## Output files
 
 Important **Output files** generated:
- - IBPparams.gro: **Structure** of the parameterized ligand in gro (GROMACS) format.
- - IBPparams.top: **Topology** of the parameterized ligand, including a reference to the IBPparams.itp.
- - IBPparams.itp: **Include Topology File (itp)** of the parameterized ligand, including the parameters information: bonds, angles, dihedrals, etc.
+ - {{output_acpype_gro}}: **Structure** of the parameterized ligand in gro (GROMACS) format.
+ - {{output_acpype_top}}: **Topology** of the parameterized ligand, including a reference to the {{output_acpype_itp}}.
+ - {{output_acpype_itp}}: **Include Topology File (itp)** of the parameterized ligand, including the parameters information: bonds, angles, dihedrals, etc.
 
 ***
 <a id="questions"></a>
