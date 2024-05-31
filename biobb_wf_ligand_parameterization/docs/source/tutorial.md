@@ -98,7 +98,7 @@ import ipywidgets
 import os
 
 ligandCode = 'IBP'
-mol_charge = 0
+mol_charge = -1
 pH = 7.4
 ```
 
