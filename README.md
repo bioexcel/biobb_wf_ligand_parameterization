@@ -35,7 +35,7 @@ Two examples are provided:
 git clone https://github.com/bioexcel/biobb_wf_ligand_parameterization.git
 cd biobb_wf_ligand_parameterization
 conda env create -f conda_env/environment.yml
-conda activate biobb_ligand_parameterization_tutorial
+conda activate biobb_wf_ligand_parameterization
 ```
 
 For parametrizing a ligand for use in **GROMACS** launch the following notebook:

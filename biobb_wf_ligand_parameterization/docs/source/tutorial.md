@@ -21,7 +21,7 @@ This tutorial aims to illustrate the process of **ligand parameterization** for 
 git clone https://github.com/bioexcel/biobb_wf_ligand_parameterization.git
 cd biobb_wf_ligand_parameterization
 conda env create -f conda_env/environment.yml
-conda activate biobb_ligand_parameterization_tutorial
+conda activate biobb_wf_ligand_parameterization
 jupyter-notebook biobb_wf_ligand_parameterization/notebooks/biobb_ligand_parameterization_tutorial.ipynb
 ```
 

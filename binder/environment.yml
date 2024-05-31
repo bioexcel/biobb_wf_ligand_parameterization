@@ -1,4 +1,4 @@
-name: biobb_ligand_parameterization_tutorial
+name: biobb_wf_ligand_parameterization
 channels:
   - conda-forge
   - bioconda
