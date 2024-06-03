@@ -25,7 +25,7 @@ biobb_wf_ligand_parameterization/notebooks/*.gif
 biobb_wf_ligand_parameterization/notebooks/*.web*.ipynb
 biobb_wf_ligand_parameterization/notebooks/*.docs.ipynb
 biobb_wf_ligand_parameterization/docs/notebooks
-biobb_wf_ligand_parameterization/html/biobb_ligand_parameterization_tutorial.web.ipynb
+biobb_wf_ligand_parameterization/html/biobb_wf_ligand_parameterization.web.ipynb
 *.old.ipynb
 *.bk.ipynb
 \#*\#
