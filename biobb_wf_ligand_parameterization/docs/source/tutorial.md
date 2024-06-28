@@ -320,9 +320,9 @@ view
 ## Output files
 
 Important **Output files** generated:
- - {{output_acpype_gro}}: **Structure** of the parameterized ligand in gro (GROMACS) format.
- - {{output_acpype_top}}: **Topology** of the parameterized ligand, including a reference to the {{output_acpype_itp}}.
- - {{output_acpype_itp}}: **Include Topology File (itp)** of the parameterized ligand, including the parameters information: bonds, angles, dihedrals, etc.
+ - **output_acpype_gro** (IBPparams.gro): **Structure** of the parameterized ligand in gro (GROMACS) format.
+ - **output_acpype_top** (IBPparams.top): **Topology** of the parameterized ligand, including a reference to the {{output_acpype_itp}}.
+ - **output_acpype_itp** (IBPparams.itp): **Include Topology File (itp)** of the parameterized ligand, including the parameters information: bonds, angles, dihedrals, etc.
 
 ***
 <a id="questions"></a>
