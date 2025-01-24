@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
+  - python<=3.10
   - biobb_io==5.0.1
   - biobb_chemistry==5.0.3
   - jupyter
