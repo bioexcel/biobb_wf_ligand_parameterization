@@ -1,4 +1,12 @@
 #!/bin/bash
+set -eux
+
+# Enable widget support
+jupyter nbextension enable --py widgetsnbextension --sys-prefix
+
+# Enable nglview
 jupyter nbextension enable nglview --py --sys-prefix
+
+# Install JupyterLab 3 extension
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install nglview-js-widgets
