@@ -8,4 +8,4 @@ dependencies:
   - jupyterlab=3.6
   - nodejs=16
   - ipywidgets=7
-  - nglview
+  - nglview<=4.0
