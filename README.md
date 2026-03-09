@@ -57,6 +57,8 @@ Click here to [execute the CNS parametrization tutorial in Binder](https://mybin
 
 Click here to [open tutorial in Google Colab](https://colab.research.google.com/github/bioexcel/biobb_wf_ligand_parameterization/blob/main/biobb_wf_ligand_parameterization/notebooks/biobb_wf_ligand_parameterization.ipynb)
 
+Click here to [open tutorial in Google Colab](https://colab.research.google.com/github/bioexcel/biobb_wf_ligand_parameterization/blob/main/biobb_wf_ligand_parameterization/notebooks/biobb_ligand_CNS_parameterization_tutorial.ipynb)
+
 ***
 
 ## Version
