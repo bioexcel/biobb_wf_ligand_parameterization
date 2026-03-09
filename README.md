@@ -55,9 +55,9 @@ Click here to [execute the GROMACS parametrization tutorial in Binder](https://m
 
 Click here to [execute the CNS parametrization tutorial in Binder](https://mybinder.org/v2/gh/bioexcel/biobb_wf_ligand_parameterization/HEAD?labpath=biobb_wf_ligand_parameterization%2Fnotebooks%2Fbiobb_ligand_CNS_parameterization_tutorial.ipynb)
 
-Click here to [open tutorial in Google Colab](https://colab.research.google.com/github/bioexcel/biobb_wf_ligand_parameterization/blob/main/biobb_wf_ligand_parameterization/notebooks/biobb_wf_ligand_parameterization.ipynb)
+Click here to [open the GROMACS parametrization tutorial in Google Colab](https://colab.research.google.com/github/bioexcel/biobb_wf_ligand_parameterization/blob/main/biobb_wf_ligand_parameterization/notebooks/biobb_wf_ligand_parameterization.ipynb)
 
-Click here to [open tutorial in Google Colab](https://colab.research.google.com/github/bioexcel/biobb_wf_ligand_parameterization/blob/main/biobb_wf_ligand_parameterization/notebooks/biobb_ligand_CNS_parameterization_tutorial.ipynb)
+Click here to [open the CNS parametrization tutorial in Google Colab](https://colab.research.google.com/github/bioexcel/biobb_wf_ligand_parameterization/blob/main/biobb_wf_ligand_parameterization/notebooks/biobb_ligand_CNS_parameterization_tutorial.ipynb)
 
 ***
 
