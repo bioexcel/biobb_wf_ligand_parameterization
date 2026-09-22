@@ -5,7 +5,7 @@ channels:
   - nodefaults
 dependencies:
   - biobb_io==5.2.3
-  - biobb_chemistry==5.2.1
+  - biobb_chemistry==5.3.0
   - jupyterlab=3.6
   - nodejs=16
   - ipywidgets=7
